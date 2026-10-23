@@ -1,10 +1,10 @@
-# faculdade-uel
+# ciencia-de-dados-uel
 
 Exercícios da faculdade (UEL), organizados por semestre e matéria.
 
 ```
-faculdade-uel/
-└── SEGUNDO SEMESTRE/
+ciencia-de-dados-uel/
+└── SEMESTRE 02/
     ├── ALGORITMOS/
     │   ├── 01 - Estruturas Condicionais/
     │   ├── 02 - Estruturas de Repetição/
