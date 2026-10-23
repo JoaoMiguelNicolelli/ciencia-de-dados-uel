@@ -13,6 +13,7 @@ private:
 
 public:
     Personagem(const std::string& nome, int hpMaximo, const Atributos& atributos);
+    virtual ~Personagem();
 
     const std::string& getNome() const;
     int getHpMaximo() const;
@@ -23,6 +24,8 @@ public:
     void receberDano(int dano);
     void curar(int quantidade);
     void mostrarStatus() const;
+
+    virtual void agir(Personagem& alvo) = 0;
 };
 
 #endif

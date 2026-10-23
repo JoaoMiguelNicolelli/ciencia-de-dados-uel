@@ -1,27 +1,29 @@
 #include <iostream>
-#include "Jogador.h"
+#include <vector>
+#include "Guerreiro.h"
+#include "Mago.h"
 #include "Monstro.h"
 
 using namespace std;
 
 int main() {
-    Atributos atributosAragorn(16, 12, 14, 10, 8, 11);
-    Jogador aragorn("Aragorn", 30, atributosAragorn);
+    vector<Personagem*> personagens;
 
-    Atributos atributosGoblin(8, 14, 10, 6, 6, 4);
-    Monstro goblin("Goblin", 10, atributosGoblin, 50);
+    personagens.push_back(new Guerreiro("Aragorn", 30, Atributos(16, 12, 14, 10, 8, 11)));
+    personagens.push_back(new Mago("Gandalf", 20, Atributos(8, 12, 10, 14, 17, 12)));
+    personagens.push_back(new Monstro("Goblin", 10, Atributos(8, 14, 10, 6, 6, 4), 50));
 
-    aragorn.mostrarStatus();
-    goblin.mostrarStatus();
+    Monstro boneco("Boneco de treino", 100, Atributos(10, 10, 10, 10, 10, 10), 0);
 
-    goblin.receberDano(15);
-    goblin.mostrarStatus();
-
-    if (!goblin.estaVivo()) {
-        aragorn.ganharXp(goblin.getXpRecompensa());
+    for (size_t i = 0; i < personagens.size(); i++) {
+        personagens[i]->agir(boneco);
     }
 
-    cout << aragorn.getNome() << " agora tem " << aragorn.getXp() << " de XP" << endl;
+    boneco.mostrarStatus();
+
+    for (size_t i = 0; i < personagens.size(); i++) {
+        delete personagens[i];
+    }
 
     return 0;
 }

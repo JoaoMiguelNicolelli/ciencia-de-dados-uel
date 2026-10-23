@@ -12,6 +12,7 @@ public:
     Monstro(const std::string& nome, int hpMaximo, const Atributos& atributos, int xpRecompensa);
 
     int getXpRecompensa() const;
+    void agir(Personagem& alvo) override;
 };
 
 #endif

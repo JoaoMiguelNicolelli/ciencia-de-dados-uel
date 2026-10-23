@@ -10,6 +10,9 @@ Personagem::Personagem(const string& nome, int hpMaximo, const Atributos& atribu
       atributos(atributos) {
 }
 
+Personagem::~Personagem() {
+}
+
 const string& Personagem::getNome() const {
     return nome;
 }
