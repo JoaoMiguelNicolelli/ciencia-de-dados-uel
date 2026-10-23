@@ -9,5 +9,8 @@
 # Configuração do editor
 .vscode/
 
+# Configuração do Claude Code
+.claude/
+
 # Variáveis de ambiente
 .env
