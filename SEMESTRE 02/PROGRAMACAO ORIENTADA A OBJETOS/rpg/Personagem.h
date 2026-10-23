@@ -14,7 +14,7 @@ private:
 public:
     Personagem(const std::string& nome, int hpMaximo, const Atributos& atributos);
 
-    std::string getNome() const;
+    const std::string& getNome() const;
     int getHpMaximo() const;
     int getHpAtual() const;
     const Atributos& getAtributos() const;

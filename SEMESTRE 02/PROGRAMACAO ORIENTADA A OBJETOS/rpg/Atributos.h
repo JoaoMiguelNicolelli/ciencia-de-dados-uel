@@ -20,6 +20,8 @@ public:
     int getSabedoria() const;
     int getInteligencia() const;
     int getCarisma() const;
+
+    int modificador(int valor) const;
 };
 
 #endif

@@ -9,15 +9,9 @@ int main() {
 
     aragorn.mostrarStatus();
 
-    aragorn.receberDano(12);
-    aragorn.mostrarStatus();
-
-    aragorn.curar(50);
-    aragorn.mostrarStatus();
-
-    aragorn.receberDano(100);
-    aragorn.mostrarStatus();
-    cout << "Esta vivo? " << aragorn.estaVivo() << endl;
+    cout << "Mod FOR (16): " << atributosAragorn.modificador(atributosAragorn.getForca()) << endl;
+    cout << "Mod INT (8): " << atributosAragorn.modificador(atributosAragorn.getInteligencia()) << endl;
+    cout << "Mod SAB (10): " << atributosAragorn.modificador(atributosAragorn.getSabedoria()) << endl;
 
     return 0;
 }

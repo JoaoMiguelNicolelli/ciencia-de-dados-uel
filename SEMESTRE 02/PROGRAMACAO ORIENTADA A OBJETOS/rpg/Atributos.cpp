@@ -33,3 +33,10 @@ int Atributos::getInteligencia() const {
 int Atributos::getCarisma() const {
     return carisma;
 }
+
+int Atributos::modificador(int valor) const {
+    if (valor >= 10) {
+        return (valor - 10) / 2;
+    }
+    return (valor - 11) / 2;
+}

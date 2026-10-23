@@ -10,7 +10,7 @@ Personagem::Personagem(const string& nome, int hpMaximo, const Atributos& atribu
       atributos(atributos) {
 }
 
-string Personagem::getNome() const {
+const string& Personagem::getNome() const {
     return nome;
 }
 
