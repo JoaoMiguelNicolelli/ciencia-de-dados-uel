@@ -1,0 +1,13 @@
+# Executáveis compilados
+*.exe
+*.out
+*.o
+
+# Pacotes de entrega
+*.zip
+
+# Configuração do editor
+.vscode/
+
+# Variáveis de ambiente
+.env
