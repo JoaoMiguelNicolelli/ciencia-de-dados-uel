@@ -71,3 +71,18 @@ void Personagem::mostrarStatus() const {
          << " CAR " << atributos.getCarisma()
          << endl;
 }
+
+ostream& operator<<(ostream& saida, const Personagem& personagem) {
+    const Atributos& a = personagem.getAtributos();
+
+    saida << personagem.getNome()
+          << " | HP: " << personagem.getHpAtual() << "/" << personagem.getHpMaximo()
+          << " | FOR " << a.getForca()
+          << " DES " << a.getDestreza()
+          << " CON " << a.getConstituicao()
+          << " SAB " << a.getSabedoria()
+          << " INT " << a.getInteligencia()
+          << " CAR " << a.getCarisma();
+
+    return saida;
+}

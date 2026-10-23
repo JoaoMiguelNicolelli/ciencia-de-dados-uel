@@ -2,6 +2,7 @@
 #define PERSONAGEM_H
 
 #include <string>
+#include <iostream>
 #include "Atributos.h"
 
 class Personagem {
@@ -27,5 +28,7 @@ public:
 
     virtual void agir(Personagem& alvo) = 0;
 };
+
+std::ostream& operator<<(std::ostream& saida, const Personagem& personagem);
 
 #endif

@@ -22,6 +22,7 @@ public:
     int getCarisma() const;
 
     int modificador(int valor) const;
+    Atributos operator+(const Atributos& outro) const;
 };
 
 #endif

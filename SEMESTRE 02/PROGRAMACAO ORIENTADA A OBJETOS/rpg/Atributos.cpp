@@ -40,3 +40,12 @@ int Atributos::modificador(int valor) const {
     }
     return (valor - 11) / 2;
 }
+
+Atributos Atributos::operator+(const Atributos& outro) const {
+    return Atributos(forca + outro.forca,
+                     destreza + outro.destreza,
+                     constituicao + outro.constituicao,
+                     sabedoria + outro.sabedoria,
+                     inteligencia + outro.inteligencia,
+                     carisma + outro.carisma);
+}
