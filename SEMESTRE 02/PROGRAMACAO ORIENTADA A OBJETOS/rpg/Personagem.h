@@ -1,0 +1,28 @@
+#ifndef PERSONAGEM_H
+#define PERSONAGEM_H
+
+#include <string>
+#include "Atributos.h"
+
+class Personagem {
+private:
+    std::string nome;
+    int hpMaximo;
+    int hpAtual;
+    Atributos atributos;
+
+public:
+    Personagem(const std::string& nome, int hpMaximo, const Atributos& atributos);
+
+    std::string getNome() const;
+    int getHpMaximo() const;
+    int getHpAtual() const;
+    const Atributos& getAtributos() const;
+
+    bool estaVivo() const;
+    void receberDano(int dano);
+    void curar(int quantidade);
+    void mostrarStatus() const;
+};
+
+#endif
