@@ -4,6 +4,9 @@ Exercícios da faculdade (UEL), organizados por semestre e matéria.
 
 ```
 ciencia-de-dados-uel/
+├── SEMESTRE 01/
+│   ├── ALGORITMOS EM PYTHON/
+│   └── INTRODUCAO A CIENCIA DE DADOS E IA/
 └── SEMESTRE 02/
     ├── ALGORITMOS/
     │   ├── 01 - Estruturas Condicionais/
