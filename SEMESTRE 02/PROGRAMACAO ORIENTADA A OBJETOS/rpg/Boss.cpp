@@ -15,6 +15,10 @@ Boss::~Boss() {
     quantidade--;
 }
 
+bool Boss::existe() {
+    return quantidade > 0;
+}
+
 Boss* Boss::criar(const string& nome, int hpMaximo, const Atributos& atributos, int xpRecompensa) {
     if (quantidade > 0) {
         cout << "Ja existe um Boss em jogo. " << nome << " nao foi criado." << endl;

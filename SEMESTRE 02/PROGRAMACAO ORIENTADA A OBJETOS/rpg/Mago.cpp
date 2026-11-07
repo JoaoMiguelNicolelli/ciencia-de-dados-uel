@@ -3,8 +3,8 @@
 
 using namespace std;
 
-Mago::Mago(const string& nome, int hpMaximo, const Atributos& atributos)
-    : Jogador(nome, hpMaximo, atributos) {
+Mago::Mago(const string& nome, int hpMaximo, const Atributos& atributosBase, const Raca& raca)
+    : Jogador(nome, hpMaximo, atributosBase, raca) {
 }
 
 void Mago::agir(Personagem& alvo) {
@@ -14,4 +14,8 @@ void Mago::agir(Personagem& alvo) {
          << " e causa " << dano << " de dano" << endl;
 
     alvo.receberDano(dano);
+}
+
+string Mago::getClasse() const {
+    return "Mago";
 }

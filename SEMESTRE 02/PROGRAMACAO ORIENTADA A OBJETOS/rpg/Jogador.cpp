@@ -2,9 +2,10 @@
 
 using namespace std;
 
-Jogador::Jogador(const string& nome, int hpMaximo, const Atributos& atributos)
-    : Personagem(nome, hpMaximo, atributos),
-      xp(0) {
+Jogador::Jogador(const string& nome, int hpMaximo, const Atributos& atributosBase, const Raca& raca)
+    : Personagem(nome, hpMaximo, atributosBase + raca.getBonus()),
+      xp(0),
+      raca(raca) {
 }
 
 int Jogador::getXp() const {
@@ -17,4 +18,8 @@ void Jogador::ganharXp(int quantidade) {
     }
 
     xp = xp + quantidade;
+}
+
+const Raca& Jogador::getRaca() const {
+    return raca;
 }

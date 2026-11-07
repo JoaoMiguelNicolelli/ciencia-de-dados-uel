@@ -6,9 +6,10 @@
 
 class Guerreiro : public Jogador {
 public:
-    Guerreiro(const std::string& nome, int hpMaximo, const Atributos& atributos);
+    Guerreiro(const std::string& nome, int hpMaximo, const Atributos& atributosBase, const Raca& raca);
 
     void agir(Personagem& alvo) override;
+    std::string getClasse() const override;
 };
 
 #endif

@@ -3,8 +3,8 @@
 
 using namespace std;
 
-Arqueiro::Arqueiro(const string& nome, int hpMaximo, const Atributos& atributos)
-    : Jogador(nome, hpMaximo, atributos) {
+Arqueiro::Arqueiro(const string& nome, int hpMaximo, const Atributos& atributosBase, const Raca& raca)
+    : Jogador(nome, hpMaximo, atributosBase, raca) {
 }
 
 void Arqueiro::agir(Personagem& alvo) {
@@ -14,4 +14,8 @@ void Arqueiro::agir(Personagem& alvo) {
          << " e causa " << dano << " de dano" << endl;
 
     alvo.receberDano(dano);
+}
+
+string Arqueiro::getClasse() const {
+    return "Arqueiro";
 }

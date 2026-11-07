@@ -12,6 +12,7 @@ private:
     Boss(const std::string& nome, int hpMaximo, const Atributos& atributos, int xpRecompensa);
 
 public:
+    static bool existe();
     static Boss* criar(const std::string& nome, int hpMaximo, const Atributos& atributos, int xpRecompensa);
 
     ~Boss() override;
