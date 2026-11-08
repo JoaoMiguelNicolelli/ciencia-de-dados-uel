@@ -10,6 +10,7 @@ public:
 
     void agir(Personagem& alvo) override;
     std::string getClasse() const override;
+    bool podeUsar(const Equipamento& equipamento) const override;
 };
 
 #endif

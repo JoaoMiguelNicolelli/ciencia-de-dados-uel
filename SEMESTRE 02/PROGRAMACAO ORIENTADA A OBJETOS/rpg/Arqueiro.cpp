@@ -9,6 +9,7 @@ Arqueiro::Arqueiro(const string& nome, int hpMaximo, const Atributos& atributosB
 
 void Arqueiro::agir(Personagem& alvo) {
     int dano = 4 + getAtributos().modificador(getAtributos().getDestreza());
+    dano = dano + getBonusEquipamentos();
 
     cout << getNome() << " dispara uma flecha em " << alvo.getNome()
          << " e causa " << dano << " de dano" << endl;
@@ -18,4 +19,14 @@ void Arqueiro::agir(Personagem& alvo) {
 
 string Arqueiro::getClasse() const {
     return "Arqueiro";
+}
+
+bool Arqueiro::podeUsar(const Equipamento& equipamento) const {
+    if (equipamento.getTipo() == TipoEquipamento::Arco) {
+        return true;
+    }
+    if (equipamento.getTipo() == TipoEquipamento::Amuleto) {
+        return true;
+    }
+    return false;
 }

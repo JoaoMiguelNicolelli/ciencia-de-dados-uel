@@ -4,13 +4,13 @@
 #include "Jogador.h"
 #include "Monstro.h"
 #include "Raca.h"
+#include "Equipamento.h"
 
 class CriadorDePersonagem {
 private:
     int jogadoresCriados;
     int monstrosCriados;
     int primeiraClasse;
-    int deslocamentoNomes;
 
     Raca sortearRaca() const;
     int sortearClasse();
@@ -20,6 +20,7 @@ public:
 
     Jogador* criarJogadorAleatorio();
     Monstro* criarMonstroAleatorio();
+    Equipamento sortearEquipamento() const;
 };
 
 #endif

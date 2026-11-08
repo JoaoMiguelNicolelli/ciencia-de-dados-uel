@@ -12,6 +12,16 @@ int Monstro::getXpRecompensa() const {
     return xpRecompensa;
 }
 
+void Monstro::adicionarLoot(const Equipamento& equipamento) {
+    loot.push_back(equipamento);
+}
+
+vector<Equipamento> Monstro::soltarLoot() {
+    vector<Equipamento> soltos = loot;
+    loot.clear();
+    return soltos;
+}
+
 void Monstro::agir(Personagem& alvo) {
     int dano = 3 + getAtributos().modificador(getAtributos().getForca());
 

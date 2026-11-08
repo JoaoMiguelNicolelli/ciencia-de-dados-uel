@@ -9,6 +9,7 @@ Mago::Mago(const string& nome, int hpMaximo, const Atributos& atributosBase, con
 
 void Mago::agir(Personagem& alvo) {
     int dano = 4 + getAtributos().modificador(getAtributos().getInteligencia());
+    dano = dano + getBonusEquipamentos();
 
     cout << getNome() << " lanca uma bola de fogo em " << alvo.getNome()
          << " e causa " << dano << " de dano" << endl;
@@ -18,4 +19,14 @@ void Mago::agir(Personagem& alvo) {
 
 string Mago::getClasse() const {
     return "Mago";
+}
+
+bool Mago::podeUsar(const Equipamento& equipamento) const {
+    if (equipamento.getTipo() == TipoEquipamento::Cajado) {
+        return true;
+    }
+    if (equipamento.getTipo() == TipoEquipamento::Amuleto) {
+        return true;
+    }
+    return false;
 }
